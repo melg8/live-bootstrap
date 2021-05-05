@@ -2,6 +2,7 @@
 """System A"""
 # SPDX-License-Identifier: GPL-3.0-or-later
 # SPDX-FileCopyrightText: 2021 Andrius Štikonas <andrius@stikonas.eu>
+# SPDX-FileCopyrightText: 2021 Melg Eight <public.melg8@gmail.com>
 
 import hashlib
 import os
@@ -435,6 +436,10 @@ class SysA:
 
         # autoconf archive 2021.02.19
         self.get_file("https://mirrors.kernel.org/gnu/autoconf-archive/autoconf-archive-2021.02.19.tar.xz")
+
+        # coreutils 8.32
+        self.get_file(["https://mirrors.kernel.org/gnu/coreutils/coreutils-8.32.tar.gz",
+                       "https://git.savannah.gnu.org/cgit/gnulib.git/snapshot/gnulib-d279bc.tar.gz"])
 
         # mpfr 4.1.0
         self.get_file("https://mirrors.kernel.org/gnu/mpfr/mpfr-4.1.0.tar.xz")

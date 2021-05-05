@@ -2,6 +2,7 @@
 .. SPDX-FileCopyrightText: 2021 Andrius Štikonas <andrius@stikonas.eu>
 .. SPDX-FileCopyrightText: 2021 Paul Dersey <pdersey@gmail.com>
 .. SPDX-FileCopyrightText: 2021 fosslinux <fosslinux@aussies.space>
+.. SPDX-FileCopyrightText: 2021 Melg Eight <public.melg8@gmail.com>
 
 .. SPDX-License-Identifier: CC-BY-SA-4.0
 
@@ -623,3 +624,14 @@ mpc 3.2.1
 
 GNU MPC is a library for multiprecision complex arithmetic with exact rounding based
 on GNU MPFR.
+
+coreutils 8.32
+=============
+
+GNU Coreutils is a collection of widely used utilities such as ``cat``,
+``chmod``, ``chown``, ``cp``, ``install``, ``ln``, ``ls``, ``mkdir``,
+``mknod``, ``mv``, ``rm``, ``rmdir``, ``tee``, ``test``, ``true``, and
+many others.
+
+We rebuild latest available coreutils 8.32 which adds needed options to make build
+results reproducible. For example ``touch --no-dereference``.
