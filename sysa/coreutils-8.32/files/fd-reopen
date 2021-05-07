@@ -1,0 +1,27 @@
+# SPDX-FileCopyrightText: 2005-2020 Free Software Foundation, Inc.
+#
+# SPDX-License-Identifier: GPL-3.0-or-later
+
+Description:
+Open a file to a particular file descriptor.
+
+Files:
+lib/fd-reopen.c
+lib/fd-reopen.h
+
+Depends-on:
+fcntl-h
+
+configure.ac:
+
+Makefile.am:
+lib_SOURCES += fd-reopen.c fd-reopen.h
+
+Include:
+"fd-reopen.h"
+
+License:
+GPL
+
+Maintainer:
+Paul Eggert

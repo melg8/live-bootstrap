@@ -591,6 +591,17 @@ automake 1.15.1
 
 GNU Automake from 1.15 series. This is the last version that runs on Perl 5.6.
 
+coreutils 8.32
+=============
+
+GNU Coreutils is a collection of widely used utilities such as ``cat``,
+``chmod``, ``chown``, ``cp``, ``install``, ``ln``, ``ls``, ``mkdir``,
+``mknod``, ``mv``, ``rm``, ``rmdir``, ``tee``, ``test``, ``true``, and
+many others.
+
+We rebuild latest available coreutils 8.32 which adds needed options to make build
+results reproducible. For example ``touch --no-dereference``.
+
 tar 1.34
 ========
 
@@ -624,14 +635,3 @@ mpc 3.2.1
 
 GNU MPC is a library for multiprecision complex arithmetic with exact rounding based
 on GNU MPFR.
-
-coreutils 8.32
-=============
-
-GNU Coreutils is a collection of widely used utilities such as ``cat``,
-``chmod``, ``chown``, ``cp``, ``install``, ``ln``, ``ls``, ``mkdir``,
-``mknod``, ``mv``, ``rm``, ``rmdir``, ``tee``, ``test``, ``true``, and
-many others.
-
-We rebuild latest available coreutils 8.32 which adds needed options to make build
-results reproducible. For example ``touch --no-dereference``.

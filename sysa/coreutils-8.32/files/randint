@@ -1,0 +1,28 @@
+# SPDX-FileCopyrightText: 2005-2020 Free Software Foundation, Inc.
+#
+# SPDX-License-Identifier: GPL-3.0-or-later
+
+Description:
+Generate random integers.
+
+Files:
+lib/randint.c
+lib/randint.h
+
+Depends-on:
+inline
+randread
+
+configure.ac:
+
+Makefile.am:
+lib_SOURCES += randint.c randint.h
+
+Include:
+"randint.h"
+
+License:
+GPL
+
+Maintainer:
+Paul Eggert

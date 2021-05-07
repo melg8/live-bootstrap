@@ -1,0 +1,27 @@
+# SPDX-FileCopyrightText: 2005-2020 Free Software Foundation, Inc.
+#
+# SPDX-License-Identifier: GPL-3.0-or-later
+
+Description:
+Compute a good buffer size for dealing with two files.
+
+Files:
+lib/buffer-lcm.c
+lib/buffer-lcm.h
+
+Depends-on:
+stddef
+
+configure.ac:
+
+Makefile.am:
+lib_SOURCES += buffer-lcm.c buffer-lcm.h
+
+Include:
+"buffer-lcm.h"
+
+License:
+GPL
+
+Maintainer:
+Paul Eggert

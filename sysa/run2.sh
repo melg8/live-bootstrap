@@ -19,6 +19,8 @@ build autoconf-2.69
 
 build automake-1.15.1
 
+build coreutils-8.32
+
 build tar-1.34
 
 build gmp-6.2.1
@@ -28,8 +30,6 @@ build autoconf-archive-2021.02.19
 build mpfr-4.1.0
 
 build mpc-1.2.1
-
-build coreutils-8.32
 
 canonicalise_all_files_timestamp
 
