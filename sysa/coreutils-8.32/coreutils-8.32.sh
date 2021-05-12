@@ -92,7 +92,7 @@ src_prepare() {
 src_configure() {
     # FORCE_UNSAFE_CONFIGURE disables "you should not run configure as root"
     # error from configuration system of coreutils.
-    FORCE_UNSAFE_CONFIGURE=1 ./configure CFLAGS="-static" \
+    FORCE_UNSAFE_CONFIGURE=1 ./configure CFLAGS="-static -O2" \
         --prefix="${PREFIX}" \
         --disable-nls \
         --target=i386-unknown-linux-gnu \
