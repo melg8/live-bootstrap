@@ -1,0 +1,17 @@
+---
+name: Checks
+# yamllint disable-line rule:truthy
+on: [push, pull_request]
+jobs:
+  build_qemu_kernel_4_4:
+    runs-on: ubuntu-20.04
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+      - uses: cachix/install-nix-action@v13
+        with:
+          nix_path: nixpkgs=channel:nixos-unstable
+      - run: |
+          mkdir temp
+          nix-shell -I nixpkgs=channel:nixpkgs-unstable -p python3 python38Packages.requests qemu linuxPackages_4_4.kernel --run 'ls -la . && ls -la .. && ls -la ../.. && mount && python3 ./rootfs.py --kernel /nix/store/kg5wa8hww2g6zc03yas7llbzrbip4b5b-linux-4.4.267/bzImage --force_timestamps --tmpdir ./temp'

@@ -11,7 +11,7 @@ import shutil
 
 import requests
 
-from lib.utils import mount, umount, copytree, get_target
+from lib.utils import mount, umount, copytree, get_target, run
 
 
 class SysA:
@@ -20,6 +20,11 @@ class SysA:
     """
     def __init__(self, arch, preserve_tmp, tmpdir, force_timestamps):
         self.git_dir = os.path.dirname(os.path.join(__file__))
+        print ("file: %s" % (__file__))
+        print ("os.path.join: %s" % os.path.join(__file__))
+        print ("git_dir %s" % (self.git_dir))
+        run ('ls', '-la', '..')
+        run ('ls', '-la', '../..')
         self.arch = arch
         self.preserve_tmp = preserve_tmp
 
